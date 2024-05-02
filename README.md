@@ -17,7 +17,7 @@ To dynamically render Anwar Jalal Shemza's "Apple Tree" using natural growth pat
 ### Example of L-System Implementation
 Below is an example of how L-Systems can be programmed and visualized, extending simple rules into detailed forms, effectively bridging the gap between natural growth patterns and geometric artistic expression.
 
-![L-System Example](readmeimages/3.png)
+![L-System Example](readmeImages/3.png)
 
 For more insights into L-Systems and their implementation:
 - [GitHub repository for L-Systems](https://github.com/arendsee/lsystems)
