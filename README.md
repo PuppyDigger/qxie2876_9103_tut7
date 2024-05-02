@@ -8,7 +8,7 @@ For my project, I considered drawing inspiration from the generative art of **Jo
 ![Fifty Sisters](readmeImages/1.png)
 ![Fifty Sisters](readmeImages/2.png)
 
-For more details on Jon McCormack's work, visit his [official website](https://example.com).
+For more details on Jon McCormack's work, visit his [official website](hhttps://jonmccormack.info/).
 
 ## Part 2: Coding Technique Exploration
 
