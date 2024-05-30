@@ -1,24 +1,49 @@
-# Quiz 8
+# qxie2876_9103_tut7_GroupA
 
-## Part 1: Imaging Technique Inspiration
+# Claude Monet 'Saint Georges majeur au crépuscule'
 
-For my project, I considered drawing inspiration from the generative art of **Jon McCormack**. McCormack's work, such as his "Fifty Sisters" series, combines elements of natural growth patterns with algorithmic processes to create complex, plant-like images. This approach aligns well with Anwar Jalal Shemza's 'Apple Tree', as both artworks exhibit a structured yet organic appearance. Employing generative algorithms enables dynamic and evolving interpretations of Shemza's geometric compositions, enhancing the visual complexity and interactivity of the project.
+## Instructions
 
-### Jon McCormack's "Fifty Sisters"
-![Fifty Sisters](readmeImages/1.png)
-![Fifty Sisters](readmeImages/2.png)
+1. Open the `index.html` file in a web browser.
+2. The animation will start automatically.
+3. Snowflakes will fall continuously, creating a winter atmosphere.
 
-For more details on Jon McCormack's work, visit his [official website](https://jonmccormack.info/).
+## Details
 
-## Part 2: Coding Technique Exploration
+### Individual Approach
 
-To dynamically render Anwar Jalal Shemza's "Apple Tree" using natural growth patterns and algorithmic processes, I propose using **Lindenmeyer Systems (L-Systems)**. L-Systems provide a mathematical framework for modeling plant growth processes. They define complex shapes through iterative steps, generating plant-like structures through simple recursive rules. This technique allows for the creation of intricate and detailed models that visually evolve over time, making it ideal for enhancing the complexity and interactivity of project visualizations by simulating natural growth within a geometric framework.
+My individual approach to animating the group code focuses on adding a snowfall effect driven by Perlin noise. The snowflakes are generated randomly and add a serene and immersive element to the animated landmark. Perlin noise is used to calculate the horizontal movement of the snowflakes, creating a more natural and organic motion.
 
-### Example of L-System Implementation
-Below is an example of how L-Systems can be programmed and visualized, extending simple rules into detailed forms, effectively bridging the gap between natural growth patterns and geometric artistic expression.
+### Animated Properties
 
-![L-System Example](readmeImages/3.png)
+The snowfall effect is the main animated property in my individual code. The snowflakes are generated randomly and fall from the top of the canvas. Each snowflake has a unique size and falls at a different speed, creating a diverse and dynamic snowfall effect.
 
-For more insights into L-Systems and their implementation:
-- [GitHub repository for L-Systems](https://github.com/arendsee/lsystems)
-- [Modeling Plants with L-Systems - Allen Pike](https://allenpike.com/modeling-plants-with-l-systems/)
+### Inspiration
+
+The snowfall effect was inspired by winter scenes in Hogwarts at Universal Studios and the serene atmosphere they create.
+![Hogwarts](readmeImages/1.jpg)
+
+## Technical Explanation
+
+The snowfall effect is achieved using the `Snowflake` class. Each snowflake is an instance of the `Snowflake` class, with properties such as position, velocity, acceleration, and radius. The `update()` method of the `Snowflake` class updates the snowflake's position based on the applied forces and velocity.
+
+Perlin noise is used to calculate the horizontal offset of the snowflakes, creating a natural and organic motion. The `noise()` function is used to generate Perlin noise values based on the snowflake's position and time.
+
+A gravity force is applied to the snowflakes to simulate their falling motion. The velocity and acceleration of each snowflake are updated accordingly.
+
+The `display()` method of the `Snowflake` class displays the snowflake on the canvas as a white ellipse with a size based on its radius.
+
+### Changes to Group Code
+
+No significant changes were made to the group code. The snowfall effect was added as an additional layer on top of the existing animation.
+
+### External Tools and Techniques
+
+The Snowflake class is inspired by The Coding Train on Youtube ([Coding Train: Snowfall Simulation](https://www.youtube.com/watch?v=cl-mHFCGzYk))
+
+## References
+- [p5.js Reference](https://p5js.org/reference/#/p5/noise)
+- [Coding Train: Snowfall Simulation](https://www.youtube.com/watch?v=cl-mHFCGzYk)
+
+
+
