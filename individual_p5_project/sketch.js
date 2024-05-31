@@ -31,12 +31,22 @@ let segmentSize = 20;
 // Array to hold snowflake objects
 let snowflakes = [];
 
+// Variable to track whether the snow effect is active
+let isSnowing = false;
+// Variable to store the snow button
+let snowButton;
+
 function setup() {
     createCanvas(windowWidth, windowHeight);
     //Calculate the scale factor
     scaleFactor = min(width / baseWidth, height / baseHeight);
     //Function to get the maximum y value from shapePoints
     calculateScaling();
+
+    // Create a button for toggling the snow effect
+    snowButton = createButton('Start Snow');
+    snowButton.position(20, 20);
+    snowButton.mousePressed(toggleSnow);
 }
 
 function windowResized() {
@@ -63,6 +73,16 @@ function calculateScaling() {
     waterEnd = height * scaleFactor;
 }
 
+// Function to toggle the snow effect when the button is clicked
+function toggleSnow() {
+    isSnowing = !isSnowing;
+    if (isSnowing) {
+        snowButton.html('Stop Snow');
+    } else {
+        snowButton.html('Start Snow');
+    }
+}
+
 function draw() {
     drawBackground();
     drawShape();
@@ -71,18 +91,21 @@ function draw() {
     drawTexture();
     applyPixelation();
     
-    // Calculate the time in seconds based on the frame count
-    let t = frameCount / 60;
-    // Randomly create a new snowflake with a 10% chance each frame
-    if (random() < 0.1) {
-        snowflakes.push(new Snowflake());
-    }
-    // Update and display each snowflake
-    for (let flake of snowflakes) {
-        // Update the snowflake's position
-        flake.update(t);
-        // Display the snowflake
-        flake.display();
+    // Check if the snow effect is active
+    if (isSnowing) {
+        // Calculate the time in seconds based on the frame count
+        let t = frameCount / 60;
+        // Randomly create a new snowflake with a 10% chance each frame
+        if (random() < 0.1) {
+            snowflakes.push(new Snowflake());
+        }
+        // Update and display each snowflake
+        for (let flake of snowflakes) {
+            // Update the snowflake's position
+            flake.update(t);
+            // Display the snowflake
+            flake.display();
+        }
     }
 }
 

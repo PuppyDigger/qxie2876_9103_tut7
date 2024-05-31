@@ -6,7 +6,7 @@
 
 1. Open the `index.html` file in a web browser.
 2. The animation will start automatically.
-3. Snowflakes will fall continuously, creating a winter atmosphere.
+3. Snowflakes will fall when click the button "start snow", creating a winter atmosphere. The snow will stop when the button is clicked again.
 
 ## Details
 
